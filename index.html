@@ -7,6 +7,26 @@
 </head>
 <body>
     <div class="container">
+        <div class="burger-menu">
+            <div class="burger-menu__content">
+                <ul class="navbar__list">
+                    <li class="list__item">
+                        <a href="#">Home</a>
+                    </li>
+                    <li class="burger-menu_item">
+                        <a href="#">Services</a>
+                    </li>
+                    <li class="burger-menu_item">
+                        <a href="#">Our Projects</a>
+                    </li>
+                    <li class="burger-menu_btn_close">
+                        <a href="#">About us</a>
+                    </li>
+                </ul>
+                <input class="input burger-menu__input">
+            </div>
+    </div>
+
         <div class="navbar">
             <img src="./images/logo.png" alt="logo">
             <ul class="navbar__list">
@@ -126,5 +146,19 @@
             
         </div>
 
+        <script>
+            let openBtn = document.querySelector('.navbar__btn_burger');
+            let closeBtn = document.querySelector('.burger-menu__btn_close');
+            let burgerMenu = document.querySelector('.burger-menu');
+      
+            openBtn.addEventListener('click', () => {
+              burgerMenu.style.display = 'block';
+            });
+      
+            closeBtn.addEventListener('click', () => {
+              burgerMenu.style.display = 'none';
+            });
+          </script>
+        
 </body>
 </html>
